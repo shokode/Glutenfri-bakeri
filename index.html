@@ -15,14 +15,19 @@
     <header class="navbar">
         <div class="navbar__logo">Fri Bakst</div>
         <nav class="navbar__links">
-            <a href="#">Hjem</a>
-            <a href="#">Produkter</a>
-            <a href="#">Om oss</a>
-            <a href="#">Kontakt</a>
+            <a href="#hjem">Hjem</a>
+            <a href="#produkter">Produkter</a>
+            <a href="#om-oss">Om oss</a>
+            <a href="#kontakt">Kontakt</a>
         </nav>
+        <button class="navbar__humburger" aria-label="Meny">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="hjem">
         <div class="hero__content">
             <h1 class="hero__title">Glutenfritt, <br>med hjertet</h1>
             <p class="hero__subtitle">Håndlagde brød og kaker som viser at glutenfritt kan smake himmelsk.</p>
@@ -30,20 +35,7 @@
         </div>
     </section>
 
-    <section class="concept">
-        <div class="concept__text">
-            <h2 class="concept__title">Bakt med kjærlighet, <br>fri for gluten</h2>
-            <p class="concept__body">Vi startet Fri Bakst fordi vi tror alle fortjener godt brød, uansett om du må eller
-                velger å spise glutenfritt. Våre oppskrifter er utviklet over år, med naturlige ingredienser og
-                tradisjonelle håndverksteknikker.</p>
-            <a href="#" class="concept__btn">Les mer om oss</a>
-        </div>
-        <div class="concept__image">
-            <img src="./images/conceptimg.jpg" alt="bakeri">
-        </div>
-    </section>
-
-    <section class="products">
+    <section class="products" id="produkter">
         <h2 class="products__title">Våre besteselgere</h2>
         <div class="products__grid">
 
@@ -146,6 +138,56 @@
             <p class="features__text">Fersk bakt hver morgen</p>
         </div>
     </section>
+
+
+    <section class="about" id="om-oss">
+        <div class="about__header">
+            <h2 class="about__title">Om oss</h2>
+        </div>
+        <div class="about__story">
+            <div class="about__image">
+                <img src="./images/julia-shypka-KU0YfiOVH8I-unsplash.jpg" alt="">
+            </div>
+            <div class="about__text">
+                <h3>Det startet med en drøm</h3>
+                <p>Da min datter fikk diagnosen cøliaki for fem år siden, begynte jakten på godt glutenfritt brød. Etter
+                    utallige skuffelser i butikkhyllene, bestemte jeg meg for å lage mitt eget.</p>
+                <p>Hundrevis av forsøk senere hadde vi oppskrifter som faktisk smakte som ekte brød. I 2021 åpnet vi
+                    dørene til Fri Bakst.</p>
+                <p>I dag baker vi hver morgen med samme kjærlighet og omtanke.</p>
+            </div>
+        </div>
+
+        <div class="about__story">
+            <div class="about__text">
+                <h3>Bakt med kjærlighet, <br>fri for gluten</h3>
+                <p class="concept__body">Vi startet Fri Bakst fordi vi tror alle fortjener godt brød, uansett om du må
+                    eller
+                    velger å spise glutenfritt. Våre oppskrifter er utviklet over år, med naturlige ingredienser og
+                    tradisjonelle håndverksteknikker.</p>
+            </div>
+            <div class="about__image">
+                <img src="./images/conceptimg.jpg" alt="">
+            </div>
+
+        </div>
+
+        <div class="about__story">
+            <div class="about__image">
+                <img src="./images/chocolatecupcake.jpg" alt="">
+            </div>
+            <div class="about__text">
+                <h3>Det startet med en drøm</h3>
+                <p>Da min datter fikk diagnosen cøliaki for fem år siden, begynte jakten på godt glutenfritt brød. Etter
+                    utallige skuffelser i butikkhyllene, bestemte jeg meg for å lage mitt eget.</p>
+                <p>Hundrevis av forsøk senere hadde vi oppskrifter som faktisk smakte som ekte brød. I 2021 åpnet vi
+                    dørene til Fri Bakst.</p>
+                <p>I dag baker vi hver morgen med samme kjærlighet og omtanke.</p>
+            </div>
+        </div>
+    </section>
+
+
 
     <footer class="footer">
         <div class="footer__brand">

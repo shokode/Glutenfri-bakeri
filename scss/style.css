@@ -2,9 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
+  overflow-x: hidden;
+  width: 100%;
   background-color: #f5f0e8;
   color: #3d2b1f;
   font-family: "Inter", sans-serif;
@@ -12,32 +15,45 @@ body {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 1.5rem 3rem;
+  gap: 0.5rem;
+  padding: 1.2rem 2rem;
   background-color: #f5f0e8;
   position: fixed;
-  top: 0;
-  width: 100%;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  max-width: 90vw;
   z-index: 100;
+  border-radius: 50px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
 }
 .navbar__logo {
-  font-family: "Playfair Display", serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #2c1810;
+  display: none;
 }
 .navbar__links {
   display: flex;
-  gap: 2rem;
+  gap: 0.5rem;
+  align-items: center;
 }
 .navbar__links a {
   text-decoration: none;
   color: #3d2b1f;
   font-size: 0.95rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 50px;
+  border: 2px solid transparent;
 }
 .navbar__links a:hover {
-  color: #d38021;
+  color: #d1924a;
+}
+.navbar__links a.active {
+  background-color: transparent;
+  color: #2c1810;
+  border: 2px solid #2c1810;
+  padding: 0.5rem 1.2rem;
 }
 
 .hero {
@@ -46,7 +62,7 @@ body {
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   padding: 5rem 3rem;
 }
 .hero__content {
@@ -54,7 +70,7 @@ body {
 }
 .hero__title {
   font-family: "Playfair Display", serif;
-  font-size: 4rem;
+  font-size: 6rem;
   color: #fdfdf7;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -78,53 +94,6 @@ body {
 .hero__btn:hover {
   background-color: #fdfdf7;
   color: #2c1810;
-}
-
-.concept {
-  display: flex;
-  align-items: center;
-  gap: 4rem;
-  padding: 6rem 3rem;
-  background-color: #f5f0e8;
-}
-.concept__text {
-  flex: 1;
-}
-.concept__title {
-  font-family: "Playfair Display", serif;
-  font-size: 2.2rem;
-  color: #2c1810;
-  margin-bottom: 1.5rem;
-  line-height: 1.3;
-}
-.concept__body {
-  color: #3d2b1f;
-  font-size: 1rem;
-  line-height: 1.8;
-  margin-bottom: 2rem;
-}
-.concept__btn {
-  display: inline-block;
-  padding: 0.8rem 1.8rem;
-  border: 2px solid #d38021;
-  border-radius: 50px;
-  background-color: rgb(252, 242, 230);
-  color: #2c1810;
-  text-decoration: none;
-}
-.concept__btn:hover {
-  background-color: #d38021;
-  color: #fdfdf7;
-}
-.concept__image {
-  flex: 1;
-}
-.concept__image img {
-  width: 100%;
-  border-radius: 12px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 450px;
 }
 
 .products {
@@ -153,7 +122,7 @@ body {
   height: 280px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 12px;
+  border-radius: 20px;
   margin-bottom: 1rem;
   transition: trasform 0.3s ease;
 }
@@ -173,13 +142,16 @@ body {
 .products__btn {
   display: inline-box;
   padding: 1rem 2.5rem;
-  background-color: #d38021;
+  background-color: #f5f0e8;
   border-radius: 50px;
-  color: #fdfdf7;
+  border: 2px solid #2c1810;
+  color: #3d2b1f;
   text-decoration: none;
 }
 .products__btn:hover {
-  opacity: 0.85;
+  color: #fdfdf7;
+  background-color: #2c1810;
+  opacity: none;
 }
 
 .features {
@@ -207,6 +179,53 @@ body {
   color: #3d2b1f;
   font-size: 0.95rem;
   line-height: 1.6;
+}
+
+.about {
+  padding: 6rem 3rem;
+  background-color: #fdfdf7;
+}
+.about__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.about__title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  color: #2c1810;
+}
+.about__story {
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.about__image {
+  flex: 1;
+}
+.about__image img {
+  width: 100%;
+  height: 450px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.about__text {
+  flex: 1;
+}
+.about__text h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: #2c1810;
+  margin-bottom: 1.5rem;
+}
+.about__text p {
+  color: #3d2b1f;
+  font-size: 1rem;
+  line-height: 1, 8;
+  margin-bottom: 1rem;
 }
 
 .footer {
