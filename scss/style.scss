@@ -14,83 +14,83 @@ body {
 
 // Navbar
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 3rem;
-  background-color: $color-background;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-
-  &__logo {
-    font-family: $font-heading;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: $color-dark;
-  }
-
-  &__links {
     display: flex;
-    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background-color: $color-background;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 
-    a {
-      text-decoration: none;
-      color: $color-text;
-      font-size: 0.95rem;
-
-      &:hover {
-        color: $color-primary;
-      }
+    &__logo {
+        font-family: $font-heading;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $color-dark;
     }
-  }
+
+    &__links {
+        display: flex;
+        gap: 2rem;
+
+        a {
+            text-decoration: none;
+            color: $color-text;
+            font-size: 0.95rem;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
 }
 
 // Hero
 .hero {
-  height: 100vh;
-  background-image: url('../images/heroimg.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: flex-end;
-  padding: 5rem 3rem;
+    height: 100vh;
+    background-image: url('../images/heroimg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 5rem 3rem;
 
-  &__content {
-    max-width: 600px;
-  }
-
-  &__title {
-    font-family: $font-heading;
-    font-size: 4rem;
-    color: $color-light;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-  }
-
-  &__subtitle {
-    color: $color-light;
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    max-width: 400px;
-  }
-
-  &__btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    border: 2px solid $color-light;
-    border-radius: 50px;
-    color: $color-light;
-    text-decoration: none;
-    font-size: 0.95rem;
-    background-color: transparent;
-
-    &:hover {
-      background-color: $color-light;
-      color: $color-dark;
+    &__content {
+        max-width: 600px;
     }
-  }
+
+    &__title {
+        font-family: $font-heading;
+        font-size: 4rem;
+        color: $color-light;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    &__subtitle {
+        color: $color-light;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        max-width: 400px;
+    }
+
+    &__btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        border: 2px solid $color-light;
+        border-radius: 50px;
+        color: $color-light;
+        text-decoration: none;
+        font-size: 0.95rem;
+        background-color: transparent;
+
+        &:hover {
+            background-color: $color-light;
+            color: $color-dark;
+        }
+    }
 }
 
 //concept
@@ -182,7 +182,7 @@ body {
             transition: trasform 0.3s ease;
         }
 
-        &:hover img{
+        &:hover img {
             transform: scale(1.03);
         }
 
@@ -248,16 +248,37 @@ body {
 }
 
 //footer
-footer {
+.footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 4rem 3rem;
     background-color: $color-dark;
     color: $color-light;
-    gap: 2rem;
+    gap: 6rem;
 
     &__logo {
         font-family: $font-heading;
         font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    &__brand p {
+        font-size: 0.9rem;
+        opacity: 0.7;
+        max-width: 200px;
+        line-height: 1.6;
+    }
+
+    h4 {
+        font-family: $font-heading;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        opacity: 0.9;
+    }
+
+    p {
+        font-size: 0.9rem;
+        opacity: 0.7;
+        line-height: 1.8;
     }
 }
