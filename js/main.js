@@ -26,6 +26,9 @@ const productsGrid = document.querySelector('.products__grid');
 productsToggle.addEventListener('click', () => {
     const expanded = productsGrid.classList.toggle('expanded');
     productsToggle.textContent = expanded ? 'Vis færre' : 'Se alle produkter';
+    if (!expanded) {
+        document.getElementById('produkter').scrollIntoView({ behavior: 'smooth' });
+    }
 });
 
 // Ingredients toggle

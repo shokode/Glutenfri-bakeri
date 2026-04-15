@@ -247,7 +247,7 @@ body {
 }
 .products__price {
   font-family: "Playfair Display", serif;
-  font-size: 1.1rem;
+  font-size: 1.7rem;
   color: #d1924a;
   font-weight: 700;
   white-space: nowrap;
@@ -317,6 +317,10 @@ body {
   .products {
     padding: 6rem 3rem;
   }
+  .products__content {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
   .products__title {
     font-size: 2.2rem;
     margin-bottom: 3rem;
@@ -385,7 +389,7 @@ body {
   flex-direction: column;
   gap: 2rem;
   padding-top: 2.5rem;
-  max-width: 1100px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 .about__story .about__image {
@@ -441,6 +445,113 @@ body {
   .about__text h3 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+  }
+}
+
+.contact {
+  background-color: #f5f0e8;
+  padding: 2rem 1.5rem 4rem;
+}
+.contact__inner {
+  background-color: #fdfdf7;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.contact__map {
+  width: 100%;
+  height: 260px;
+}
+.contact__map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 3rem 1.5rem;
+}
+.contact__block h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  color: #2c1810;
+  margin-bottom: 1rem;
+}
+.contact__block p,
+.contact__block a {
+  display: block;
+  color: #3d2b1f;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  text-decoration: none;
+}
+.contact__block p:hover,
+.contact__block a:hover {
+  color: #d1924a;
+}
+.contact__hours {
+  list-style: none;
+  max-width: 200px;
+}
+.contact__hours li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+  color: #3d2b1f;
+  line-height: 2;
+}
+.contact__hours li span {
+  white-space: nowrap;
+}
+.contact__hours li span:last-child {
+  opacity: 0.6;
+}
+@media (min-width: 768px) {
+  .contact {
+    padding: 2rem 2rem 4rem;
+  }
+  .contact__info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2.5rem 2rem;
+  }
+  .contact__block {
+    flex: 1;
+    min-width: 160px;
+  }
+}
+@media (min-width: 1024px) {
+  .contact {
+    padding: 3rem 3rem 5rem;
+  }
+  .contact__inner {
+    display: flex;
+    align-items: stretch;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .contact__map {
+    width: 50%;
+    height: auto;
+    min-height: 420px;
+    flex-shrink: 0;
+  }
+  .contact__info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    padding: 3.5rem 3rem;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  .contact__block {
+    flex: 1 1 150px;
+  }
+  .contact__block:first-child {
+    flex-basis: 100%;
   }
 }
 
