@@ -19,6 +19,24 @@ navMenu.querySelectorAll('a').forEach(link => {
     });
 });
 
+// Products show more / less
+const productsToggle = document.getElementById('products-toggle');
+const productsGrid = document.querySelector('.products__grid');
+
+productsToggle.addEventListener('click', () => {
+    const expanded = productsGrid.classList.toggle('expanded');
+    productsToggle.textContent = expanded ? 'Vis færre' : 'Se alle produkter';
+});
+
+// Ingredients toggle
+document.querySelectorAll('.products__ing-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const ing = btn.nextElementSibling;
+        ing.classList.toggle('open');
+        btn.classList.toggle('open');
+    });
+});
+
 // Active nav on scroll
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.navbar__links a');
