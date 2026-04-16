@@ -228,9 +228,6 @@ body {
 .products__card--extra {
   display: none;
 }
-.products__grid.expanded .products__card--extra {
-  display: block;
-}
 .products__card-body {
   padding: 0.9rem 0.2rem;
 }
